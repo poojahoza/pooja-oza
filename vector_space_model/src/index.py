@@ -10,6 +10,9 @@ from create_index import CreateIndex
 from query_index import QueryIndex
 
 if __name__ == '__main__':
+	if len(sys.argv) == 1 :
+		print 'Please enter query'
+		exit()
 	user_input = ' '.join(sys.argv[1:])
 	print 'Given Query: %s' % user_input
 	create_index_obj = CreateIndex(user_input)
